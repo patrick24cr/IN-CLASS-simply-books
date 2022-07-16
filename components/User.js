@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useAuth } from '../utils/context/authContext';
 
 export default function User({
-  name, image, email, lastSignInTime
+  name, image, email, lastSignInTime,
 }) {
-  const { user } = useAuth();
   return (
     <>
-      <div>{name}}</div>
+      <div>{name}</div>
       <div>{image}</div>
       <img
         src="https://lh3.googleusercontent.com/a-/AOh14Gh3H1uwOHwOrEVii0dcudi8hgZ8zcAdb14V4VN2PQ=s96-c"
         alt="new"
       />
-      <div>{email}}</div>
+      <div>{email}</div>
       <div>{lastSignInTime}</div>
     </>
   );
