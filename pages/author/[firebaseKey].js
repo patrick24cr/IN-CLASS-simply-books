@@ -5,6 +5,6 @@ export default function DynamicRoute() {
   const router = useRouter();
   const { firebaseKey } = router.query;
   return (
-    <div>Dynamic Route</div>
+    <div>Dynamic Route {firebaseKey}</div>
   );
 }
