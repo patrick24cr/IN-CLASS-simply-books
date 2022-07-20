@@ -56,8 +56,8 @@ const deleteSingleAuthor = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 // FIXME: UPDATE AUTHOR
-const updateAuthor = (firebaseKey, authorObj, uid) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/authors/${firebaseKey}.json`, authorObj)
+const updateAuthor = (authorObj, uid) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/authors/${authorObj.firebaseKey}.json`, authorObj)
     .then(() => {
       getAuthors(uid).then(resolve);
     }).catch(reject);
