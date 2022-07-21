@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -7,12 +8,12 @@ export default function User({
   return (
     <>
       <div>{name}</div>
-      <div>{image}</div>
       <img
-        src="https://lh3.googleusercontent.com/a-/AOh14Gh3H1uwOHwOrEVii0dcudi8hgZ8zcAdb14V4VN2PQ=s96-c"
-        alt="new"
+        src={image}
+        alt="User"
       />
       <div>{email}</div>
+      <div>Last login:</div>
       <div>{lastSignInTime}</div>
     </>
   );
@@ -26,7 +27,7 @@ User.propTypes = {
 };
 
 User.defaultProps = {
-  name: 'BurnsPatrick',
+  name: 'no name',
   image: 'no image',
   email: 'no email',
   lastSignInTime: 'unknown',

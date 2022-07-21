@@ -16,7 +16,7 @@ export default function Authors() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="d-flex flex-wrap">
       {authors.map((authorObj) => (
         <AuthorCard key={authorObj.firebaseKey} authorObj={authorObj} onUpdate={getAllTheAuthors} />
       ))}
